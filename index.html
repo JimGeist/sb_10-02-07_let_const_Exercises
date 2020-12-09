@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Unit 10.02.07 - let and const</title>
+  <script type="text/javascript" src="let_const.js"></script>
+</head>
+
+<body>
+  <h1>ES5 Global Constants</h1>
+  var PI = 3.14;<br>
+  PI = 42; // stop me from doing this!<br>
+  <br>
+  <h1>ES2015 Global Constants</h1>
+  const PI = 3.14;<br>
+  <br>
+  <h1>Pop Quiz - var, let, const, hoisting</h1>
+  <h2>What is the difference between <strong>var</strong> and <strong>let</strong>?</h2>
+  <p><strong>var</strong> declared variables can get re-declared. Variables declared with
+    <strong>var</strong> are also accessible in the windows object, window.xxx. <strong>var</strong>
+    declared variables will hoist to the top of the scope where it is
+    declared. The scope for variables declared with <strong>var</strong> is the function where it was declared,
+    regardless of code block. Variables declared with <strong>var</strong> can change. </p>
+  <p><strong>let</strong> declared variables canNOT get re-declared and they also do NOT
+    'hoist'. Variables declared with <strong>let</strong> are not added to the window object.
+    The scope for variables declared with <strong>let</strong> is block scope -- the variable is
+    only known
+    to all the code within the { and } where the variable was declared with <strong>let</strong>.
+    Variables declared with <strong>let</strong> can change. </p>
+
+  <h2>What is the difference between <strong>var</strong> and <strong>const</strong>?</h2>
+  <p>Same as above: <strong>let</strong> declared variables canNOT get re-declared and they also do NOT
+    'hoist'. Variables declared with <strong>let</strong> are not added to the window object.
+    The scope for variables declared with <strong>let</strong> is block scope -- the variable is
+    only known
+    to all the code within the { and } where the variable was declared with <strong>let</strong>.
+    Variables declared with <strong>let</strong> can change. </p>
+  <p><strong>const</strong> declared variables function in the same way as let-declared
+    variables except <strong>const</strong> are CONSTant and cannot change from the value assigned
+    when declared. The big caveat are reference objects -- the properties and values within the
+    object can change but the reference to the object cannot change. </p>
+
+  <p></p>
+  <h2>What is the difference between <strong>let</strong> and <strong>const</strong>?</h2>
+  <p>Covered above. let-declared variables can change, const-declared things cannot change.
+    (reference-object exception caveat). </p>
+  <h2>What is hoisting?</h2>
+  <p>Hoisting is applicable to <strong>var</strong> declared variables. With hoisting, the
+    declaration of the <strong>var</strong>
+    happens at the top of the scope / function regardless of where it is initialized and used.
+    The var is not assigned a value until the assign is encountered in code. The variable is
+    undefined (instead of hard error not declared) when the var-declared variable is
+    referenced in code before it was actually assigned.</p>
+  <p>Contrasting with <strong>let</strong>, the declaration occurs where the variable is
+    declared in the
+    code block. Referencing a <strong>let</strong>-declared variable before it is declared
+    will cause a not declared hard error (not sure if only the function will not run or the
+    entire script file).
+  </p>
+
+
+</body>
+
+</html>
